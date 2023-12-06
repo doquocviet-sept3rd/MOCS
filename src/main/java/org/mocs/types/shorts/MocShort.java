@@ -1,14 +1,15 @@
 package org.mocs.types.shorts;
 
-import org.jetbrains.annotations.NotNull;
 import org.mocs.factory.MocFactory;
 
 /**
- * The MocShort class represents
+ * The MocShort class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Short
  */
 
+@Deprecated
 @SuppressWarnings("unused")
 public class MocShort extends MocFactory {
     /**
@@ -23,8 +24,4 @@ public class MocShort extends MocFactory {
      */
     private static final short MAX_VALUE = 32767;
 
-    @NotNull
-    public static Short any() {
-        return null;
-    }
 }

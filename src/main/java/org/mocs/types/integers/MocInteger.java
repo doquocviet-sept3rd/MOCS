@@ -11,9 +11,10 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 
 /**
- * The MocInteger class represents
+ * The MocInteger class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Integer
  */
 
 @SuppressWarnings("unused")
@@ -69,7 +70,7 @@ public class MocInteger extends MocFactory {
     @NotNull
     public static List<Integer> anyList() {
         final List<Integer> integers = new ArrayList<>();
-        IntStream.range(0, any(DEFAULT_LIST_LENGTH)).forEach(number -> integers.add(any()));
+        IntStream.range(0, any(1, DEFAULT_LIST_LENGTH)).forEach(number -> integers.add(any()));
         return integers;
     }
 
@@ -81,7 +82,7 @@ public class MocInteger extends MocFactory {
     @NotNull
     public static List<Integer> nullableAnyList() {
         final List<Integer> integers = new ArrayList<>();
-        IntStream.range(0, any(DEFAULT_LIST_LENGTH)).forEach(number -> integers.add(nullableAny()));
+        IntStream.range(0, any(1, DEFAULT_LIST_LENGTH)).forEach(number -> integers.add(nullableAny()));
         return integers;
     }
 
@@ -113,7 +114,7 @@ public class MocInteger extends MocFactory {
             throw new IllegalArgumentException("The length must be greater than zero");
         }
         final List<Integer> integers = new ArrayList<>();
-        IntStream.range(0, any(length)).forEach(number -> integers.add(nullableAny()));
+        IntStream.range(0, any(1, length)).forEach(number -> integers.add(nullableAny()));
         return integers;
     }
 

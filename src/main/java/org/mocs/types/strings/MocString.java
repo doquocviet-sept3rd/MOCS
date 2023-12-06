@@ -8,12 +8,14 @@ import org.mocs.types.integers.MocInteger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.IntStream;
 
 /**
- * The MocString class represents
+ * The MocString class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see String
  */
 
 @SuppressWarnings("unused")
@@ -63,7 +65,7 @@ public class MocString extends MocFactory {
     @NotNull
     public static List<String> anyList() {
         final List<String> strings = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> strings.add(any()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> strings.add(any()));
         return strings;
     }
 
@@ -80,7 +82,7 @@ public class MocString extends MocFactory {
             throw new IllegalArgumentException("The length must be greater than zero");
         }
         final List<String> strings = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(length)).forEach(number -> strings.add(any()));
+        IntStream.range(0, MocInteger.any(1, length)).forEach(number -> strings.add(any()));
         return strings;
     }
 
@@ -90,9 +92,18 @@ public class MocString extends MocFactory {
             throw new IllegalArgumentException("The length must be greater than zero");
         }
         final List<String> strings = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(length)).forEach(number -> strings.add(nullableAny()));
+        IntStream.range(0, MocInteger.any(1, length)).forEach(number -> strings.add(nullableAny()));
         return strings;
     }
 
+    /**
+     * Random string generator with uuid format
+     *
+     * @return random string uuid format
+     */
+    @NotNull
+    public static String uuid() {
+        return UUID.randomUUID().toString();
+    }
 
 }

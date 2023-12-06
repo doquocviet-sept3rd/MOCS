@@ -12,9 +12,10 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 
 /**
- * The MocLong class represents
+ * The MocLong class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Long
  */
 
 @SuppressWarnings("unused")
@@ -71,7 +72,7 @@ public class MocLong extends MocFactory {
     @NotNull
     public static List<Long> nullableAnyList() {
         final List<Long> longs = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> longs.add(nullableAny()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> longs.add(nullableAny()));
         return longs;
     }
 
@@ -103,7 +104,7 @@ public class MocLong extends MocFactory {
             throw new IllegalArgumentException("The length must be greater than zero");
         }
         final List<Long> longs = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> longs.add(nullableAny()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> longs.add(nullableAny()));
         return longs;
     }
 

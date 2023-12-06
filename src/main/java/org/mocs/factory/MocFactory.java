@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * The {@link MocFactory} class
- * This class contains the generic variables which can be used to generate random values
+ * <p>This class contains the generic variables which can be used to generate random values</p>
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
  */

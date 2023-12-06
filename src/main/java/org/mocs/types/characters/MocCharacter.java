@@ -2,8 +2,8 @@ package org.mocs.types.characters;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.mocs.types.booleans.MocBoolean;
 import org.mocs.factory.MocFactory;
+import org.mocs.types.booleans.MocBoolean;
 import org.mocs.types.integers.MocInteger;
 
 import java.util.ArrayList;
@@ -11,9 +11,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * The MocCharacter class represents
+ * The MocCharacter class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Character
  */
 
 @SuppressWarnings("unused")

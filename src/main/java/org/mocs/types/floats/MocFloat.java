@@ -11,9 +11,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * The MocFloat class represents
+ * The MocFloat class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Float
  */
 
 @SuppressWarnings("unused")
@@ -63,7 +64,7 @@ public class MocFloat extends MocFactory {
     @NotNull
     public static List<Float> anyList() {
         List<Float> floats = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> floats.add(any()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> floats.add(any()));
         return floats;
     }
 
@@ -75,7 +76,7 @@ public class MocFloat extends MocFactory {
     @NotNull
     public static List<Float> nullableAnyList() {
         List<Float> floats = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> floats.add(nullableAny()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> floats.add(nullableAny()));
         return floats;
     }
 
@@ -91,7 +92,7 @@ public class MocFloat extends MocFactory {
             throw new IllegalArgumentException("The length must not be less or equal to 0");
         }
         List<Float> floats = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(length)).forEach(number -> floats.add(any()));
+        IntStream.range(0, MocInteger.any(1, length)).forEach(number -> floats.add(any()));
         return floats;
     }
 

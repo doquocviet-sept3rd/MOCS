@@ -11,9 +11,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * The MocDouble class represents
+ * The MocDouble class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Double
  */
 
 @SuppressWarnings("unused")
@@ -65,7 +66,7 @@ public class MocDouble extends MocFactory {
     @NotNull
     public static List<Double> anyList() {
         List<Double> doubles = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> doubles.add(any()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> doubles.add(any()));
         return doubles;
     }
 
@@ -77,7 +78,7 @@ public class MocDouble extends MocFactory {
     @NotNull
     public static List<Double> nullableAnyList() {
         List<Double> doubles = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(DEFAULT_LIST_LENGTH)).forEach(number -> doubles.add(nullableAny()));
+        IntStream.range(0, MocInteger.any(1, DEFAULT_LIST_LENGTH)).forEach(number -> doubles.add(nullableAny()));
         return doubles;
     }
 
@@ -108,7 +109,7 @@ public class MocDouble extends MocFactory {
             throw new IllegalArgumentException("The length must not be less or equal to 0");
         }
         List<Double> doubles = new ArrayList<>();
-        IntStream.range(0, MocInteger.any(length)).forEach(number -> doubles.add(nullableAny()));
+        IntStream.range(0, MocInteger.any(1, length)).forEach(number -> doubles.add(nullableAny()));
         return doubles;
     }
 

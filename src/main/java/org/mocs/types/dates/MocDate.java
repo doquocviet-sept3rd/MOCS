@@ -2,8 +2,8 @@ package org.mocs.types.dates;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.mocs.types.booleans.MocBoolean;
 import org.mocs.factory.MocFactory;
+import org.mocs.types.booleans.MocBoolean;
 import org.mocs.types.integers.MocInteger;
 
 import java.util.ArrayList;
@@ -12,9 +12,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * The MocDate class represents
+ * The MocDate class
  *
  * @author <a href="mailto:doquocviet.sept3rd@gmail.com">Do Quoc Viet</a>
+ * @see Date
  */
 
 @SuppressWarnings("unused")
